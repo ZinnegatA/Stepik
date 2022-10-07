@@ -92,3 +92,33 @@ from random import randint
 # print(random_massive)
 # print(quicksort(random_massive))
 
+# Mergesort
+# def mergesort(massive):
+#     def massive_merge(a, b):
+#         i = j = 0
+#         result = []
+#         while i < len(a) and j < len(b):
+#             if a[i] < b[j]:
+#                 result.append(a[i])
+#                 i += 1
+#             else:
+#                 result.append(b[j])
+#                 j += 1
+#         while i < len(a):
+#             result.append(a[i])
+#             i += 1
+#         while j < len(b):
+#             result.append(b[j])
+#             j += 1
+#         return result
+#     if len(massive) == 1:
+#         return massive
+#     middle = len(massive) // 2
+#     left = mergesort(massive[:middle])
+#     right = mergesort(massive[middle:])
+#     return massive_merge(left, right)
+#
+#
+# random_massive = [randint(0, 100) for _ in range(randint(0, 10))]
+# print(random_massive)
+# print(mergesort(random_massive))
