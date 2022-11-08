@@ -23,19 +23,16 @@ from random import randint
 
 # Selection Sort
 # def selection_sort(massive):
-#     for i in range(len(massive) - 1):
-#         smallest = massive[i]
-#         smallest_index = i
-#         for j in range(i + 1, len(massive)):
-#             if smallest > massive[j]:
-#                 smallest = massive[j]
-#                 smallest_index = j
-#         if smallest_index != i:
-#             massive[i], massive[smallest_index] = massive[smallest_index], massive[i]
+#    for i in range(len(massive)):
+#        min_index = i
+#        for j in range(i + 1, len(massive)):
+#            if massive[min_index] > massive[j]:
+#                min_index = j
+#        massive[i], massive[min_index] = massive[min_index], massive[i]
 #
-#     return massive
-#
-#
+#    return massive
+
+
 # random_massive = [randint(0, 100) for _ in range(10)]
 # print(random_massive)
 # print(selection_sort(random_massive))
@@ -122,3 +119,61 @@ from random import randint
 # random_massive = [randint(0, 100) for _ in range(randint(0, 10))]
 # print(random_massive)
 # print(mergesort(random_massive))
+
+# Bubble sort
+# def bubble_sort(massive):
+#     for i in range(len(massive) - 1):
+#         for j in range(len(massive) - i - 1):
+#             if massive[j] > massive[j + 1]:
+#                 massive[j], massive[j + 1] = massive[j + 1], massive[j]
+#     return massive
+#
+#
+# random_massive = [randint(0, 100) for _ in range(randint(0, 10))]
+# print(random_massive)
+# print(bubble_sort(random_massive))
+
+# Insertion sort
+# def insertion_sort(massive):
+#     for i in range(1, len(massive)):
+#         for j in range(i, 0, -1):
+#             if massive[j] < massive[j - 1]:
+#                 massive[j], massive[j - 1] = massive[j - 1], massive[j]
+#             else:
+#                 break
+#     return massive
+#
+#
+# random_massive = [randint(0, 100) for _ in range(randint(0, 10))]
+# print(random_massive)
+# print(insertion_sort(random_massive))
+
+# Heap sort
+# def heapify(arr, n, i):
+#     largest = i
+#     left = 2 * i + 1
+#     right = 2 * i + 2
+#
+#     if left < n and arr[i] < arr[left]:
+#         largest = left
+#
+#     if right < n and arr[largest] < arr[right]:
+#         largest = right
+#
+#     if largest != i:
+#         arr[i], arr[largest] = arr[largest], arr[i]
+#         heapify(arr, n, largest)
+#
+#
+# def heap_sort(massive):
+#     for i in range(len(massive) // 2, -1, -1):
+#         heapify(massive, len(massive), i)
+#     for i in range(len(massive) - 1, 0, -1):
+#         massive[i], massive[0] = massive[0], massive[i]
+#         heapify(massive, i, 0)
+#     return massive
+#
+#
+# random_massive = [randint(0, 100) for _ in range(randint(0, 10))]
+# print(random_massive)
+# print(heap_sort(random_massive))
